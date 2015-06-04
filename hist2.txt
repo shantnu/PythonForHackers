@@ -1,0 +1,319 @@
+    1  cat /etc/rc.local 
+    2  sudo update-locale LANG=en_US
+    3  sudo locale-gen en_US
+    4  sudo update-locale LANG=en_US
+    5  hist
+    6  history
+    7  ls
+    8  ls /vagrant/
+    9  /vagrant
+   10  cd /vagrant
+   11  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   12  echo 0 > /proc/sys/kernel/randomize_va_space
+   13  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   14  ls /proc/sys/kernel/randomize_va_space 
+   15  whoami
+   16  su root
+   17  sudo passwd root
+   18  su
+   19  touch a.c
+   20  mv a.c overflow.c
+   21  touch c
+   22  chmod +x c
+   23  ./c
+   24  ./overflow
+   25  gdb overflow
+   26  sudo apt-get install gdb
+   27  sudo apt-get update
+   28  sudo apt-get install gdb -y
+   29  gdb overflow
+   30  ./c
+   31  gdb overflow
+   32  objdump
+   33  objdump overflow
+   34  objdump -f overflow
+   35  objdump -x overflow
+   36  objdump -t overflow
+   37  ./c
+   38  gcc overflow2.c -o overflow2 -fno-stack-protector -g
+   39  ./overflow
+   40  ./overflow2
+   41  gcc overflow2.c -o overflow2 -fno-stack-protector -g
+   42  ./overflow2
+   43  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   44  ./overflow2
+   45  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   46  ./overflow2
+   47  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   48  ./overflow2
+   49  ./c
+   50  gcc overflow.c -o overflow -fno-stack-protector -g
+   51  objdump -t overflow
+   52  gcc overflow.c -o overflow -fno-stack-protector -g -o0
+   53  objdump -t overflow
+   54  objdump -t overflow | grep dead
+   55  ./overflow2
+   56  ./overflow
+   57  gdb overflow
+   58  ./overflow2
+   59  gcc o.c -o o
+   60  gcc o3.c -o o3
+   61  ls
+   62  gcc O3.c -o o3
+   63  gcc overflow3.c -o overflow3 -fno-stack-protector -g
+   64  ./overflow3
+   65  ./overflow3 q
+   66  ./overflow3 qq
+   67  ./overflow3 qqqqq
+   68  ./overflow3 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+   69  ./overflow3 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+   70  ./overflow3
+   71  gcc overflow3.c -o overflow3 -fno-stack-protector -g
+   72  ./overflow3
+   73  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   74  ./overflow3
+   75  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   76  su
+   77  ./overflow3
+   78  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   79  ll
+   80  rm O
+   81  rm 0
+   82  rm 03.c 
+   83  rm overflow3
+   84  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   85  ./overflow3
+   86  ls -l
+   87  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   88  ls -l
+   89  rm 0
+   90  ./overflow3
+   91  ./overflow3 w
+   92  ./overflow3 wwwwwwwwww
+   93  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   94  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   95  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   96  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   97  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   98  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   99  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+  100  echo "Hello" > h.txt
+  101  echo "secret password" > p.txt
+  102  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  103  ./overflow3 wwwwwwww
+  104  ./overflow3 
+  105  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  106  ./overflow3 
+  107  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  108  ./overflow3 
+  109  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  110  ./overflow3 
+  111  cat h.txt 
+  112  ./overflow3 ww
+  113  ./overflow3 wwwwww
+  114  ./overflow3 wwwwwwwww
+  115  ./overflow3 wwwwwwwwwwww
+  116  ./overflow3 wwwwwwwwwwwwwwww
+  117  ./overflow3 wwwwwwwwwwwwwwwwwwww
+  118  ./overflow3 wwwwwwwwwwwwwwwww
+  119  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  120  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  121  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  122  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  123  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  124  ./overflow3 wwwwwwwwwwwwwwwsecret.txt
+  125  ./overflow3 wwwwwwwwwwwwwwwwwsecret.txt
+  126  ./overflow3 "wwwwwwwwwwwwwwwwsecret.txt"
+  127  ls
+  128  cat p.txt 
+  129  ./overflow3 wwwwwwwwwwwwwwwwwp.txt
+  130  ./overflow3 wwwwwwwwwwwwwwwwp.txt
+  131  history > history.txt
+  132  ls /etc/shadow
+  133  cat /etc/shadow
+  134  sudo cat /etc/shadow
+  135  exit
+  136  python
+  137  python3
+  138  sudo apt-get install python3-minimal
+  139  python3
+  140  pip3
+  141  pip
+  142  sudo apt-get install python-pip
+  143  pip install flask
+  144  sudo pip install flask
+  145  cd /vagrant/
+  146  python app.py 
+  147  echo "hello world" > hello.txt
+  148  python app.py 
+  149  ls ../
+  150  python app.py 
+  151  ls ../etc/shadow
+  152  cat ../etc/shadow
+  153  sudo cat ../etc/shadow
+  154  python app.py 
+  155  sudo python app.py 
+  156  echo "User 1 secret data" > user1
+  157  python app.py 
+  158  exit
+  159  cd /vagrant/
+  160  ls
+  161  gcc stack_overflow.c -o stack_overflow
+  162  ./stack_overflow
+  163  gcc stack_overflow.c -o stack_overflow
+  164  ./stack_overflow
+  165  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+  166  su
+  167  ./stack_overflow
+  168  ./overflow2
+  169  gcc stack_overflow.c -o stack_overflow
+  170  ./stack_overflow
+  171  gcc stack_overflow.c -o stack_overflow  -fno-stack-protector
+  172  ./stack_overflow
+  173  ./overflow3
+  174  ./overflow3 sds
+  175  ./overflow3a.txt
+  176  ./overflow3 a.txt
+  177  cat h.txt 
+  178  ls
+  179  cat hello.txt 
+  180  ./overflow3 a.txt
+  181  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  182  ./overflow3 wwwwwwwwwwwwwwwsecret.txt
+  183  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  184  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  185  ./overflow3 wwwwwwwwwwwwwwwww
+  186  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  187  touch secret.txt
+  188  nano secret.txt 
+  189  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  190  ./overflow3 wwwwwwwwwwwwwwwwwwsecret.txt
+  191  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  192  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  193  ./buffer_overflow
+  194  cat hello.txt 
+  195  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  196  ./buffer_overflow
+  197  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  198  ./buffer_overflow
+  199  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  200  ./buffer_overflow
+  201  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  202  ./buffer_overflow
+  203  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  204  ./buffer_overflow
+  205  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  206  ./buffer_overflow
+  207  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  208  ./buffer_overflow
+  209  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  210  ./buffer_overflow
+  211  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  212  ./buffer_overflow
+  213  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  214  ./buffer_overflow
+  215  ./buffer_overflow st
+  216  ./buffer_overflow
+  217  ./buffer_overflow st
+  218  ./buffer_overflow
+  219  ./buffer_overflow st
+  220  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  221  ./buffer_overflow st
+  222  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  223  ./buffer_overflow st
+  224  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  225  ./buffer_overflow st
+  226  ./buffer_overflow stddddddddddddddddddddddddd
+  227  ./buffer_overflow stddddddddddddddddddddddddddddddddddddddddddd
+  228  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  229  ./buffer_overflow stddddddddddddddddddddddddddddddddddddddddddd
+  230  ./buffer_overflow stddddddd
+  231  ./buffer_overflow stdddddddsdsds
+  232  ./buffer_overflow stdddddddsdsdssdsddd
+  233  ./buffer_overflow stdddddddsdsdssda.txt
+  234  ./buffer_overflow stdddddddsdsdssdsexret.txt
+  235  ./buffer_overflow stdddddddsdsdssdsecret.txt
+  236  gcc buffer_overflow.c -o buffer_overflow -fno-stack-protector -g -O0
+  237  ./buffer_overflow st
+  238  ./buffer_overflow stdddddddsdsdssdsecret.txt
+  239  ./buffer_overflow st
+  240  cat hello.txt 
+  241  ./buffer_overflow secret.txt
+  242  ./buffer_overflow st
+  243  gcc heartbleed.c -o heartbleed -O0
+  244  #
+  245  ./heartbleed
+  246  gcc heartbleed.c -o heartbleed -O0
+  247  ./heartbleed
+  248  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  249  ./heartbleed
+  250  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  251  ./heartbleed
+  252  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  253  ./heartbleed
+  254  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  255  ./heartbleed
+  256  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  257  ./heartbleed
+  258  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  259  ./heartbleed
+  260  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  261  ./heartbleed
+  262  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  263  ./heartbleed
+  264  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  265  ./heartbleed
+  266  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  267  ./heartbleed
+  268  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  269  ./heartbleed
+  270  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  271  ./heartbleed
+  272  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  273  ./heartbleed
+  274  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  275  ./heartbleed
+  276  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  277  ./heartbleed
+  278  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  279  ./heartbleed
+  280  gcc heartbleed.c -o heartbleed -O0 -fno-stack-protector
+  281  ./heartbleed
+  282  ./heartbleed 1
+  283  ./heartbleed 2
+  284  ./heartbleed 50
+  285  ./heartbleed 100
+  286  ls
+  287  python app.py 
+  288  sudo apt-get install Xvfb
+  289  sudo apt-get update
+  290  sudo apt-get install Xvfb
+  291  sudo apt-get install xvfb
+  292  sudo pip install pyvirtualdisplay
+  293  python app.py &
+  294  python h.py
+  295  pip install selenium
+  296  sudo pip install selenium
+  297  python h.py
+  298  sudo apt-get install firefox -y
+  299  python h.py
+  300  ls *.py
+  301  ls user*
+  302  python h.py
+  303  python app.py 
+  304  python h.py
+  305  ls user*
+  306  cp user1 user2 user3
+  307  ls user*
+  308  cp user1 user2 
+  309  cp user1 user3
+  310  nano user2
+  311  nano user3
+  312  python h.py
+  313  python3
+  314  python3 h.py
+  315  pip3
+  316  python3 h.py
+  317  python h.py
+  318  pip install requests
+  319  history > hist2.txt

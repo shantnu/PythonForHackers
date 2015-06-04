@@ -1,0 +1,131 @@
+    1  cat /etc/rc.local 
+    2  sudo update-locale LANG=en_US
+    3  sudo locale-gen en_US
+    4  sudo update-locale LANG=en_US
+    5  hist
+    6  history
+    7  ls
+    8  ls /vagrant/
+    9  /vagrant
+   10  cd /vagrant
+   11  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   12  echo 0 > /proc/sys/kernel/randomize_va_space
+   13  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   14  ls /proc/sys/kernel/randomize_va_space 
+   15  whoami
+   16  su root
+   17  sudo passwd root
+   18  su
+   19  touch a.c
+   20  mv a.c overflow.c
+   21  touch c
+   22  chmod +x c
+   23  ./c
+   24  ./overflow
+   25  gdb overflow
+   26  sudo apt-get install gdb
+   27  sudo apt-get update
+   28  sudo apt-get install gdb -y
+   29  gdb overflow
+   30  ./c
+   31  gdb overflow
+   32  objdump
+   33  objdump overflow
+   34  objdump -f overflow
+   35  objdump -x overflow
+   36  objdump -t overflow
+   37  ./c
+   38  gcc overflow2.c -o overflow2 -fno-stack-protector -g
+   39  ./overflow
+   40  ./overflow2
+   41  gcc overflow2.c -o overflow2 -fno-stack-protector -g
+   42  ./overflow2
+   43  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   44  ./overflow2
+   45  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   46  ./overflow2
+   47  gcc -o0 overflow2.c -o overflow2 -fno-stack-protector -g
+   48  ./overflow2
+   49  ./c
+   50  gcc overflow.c -o overflow -fno-stack-protector -g
+   51  objdump -t overflow
+   52  gcc overflow.c -o overflow -fno-stack-protector -g -o0
+   53  objdump -t overflow
+   54  objdump -t overflow | grep dead
+   55  ./overflow2
+   56  ./overflow
+   57  gdb overflow
+   58  ./overflow2
+   59  gcc o.c -o o
+   60  gcc o3.c -o o3
+   61  ls
+   62  gcc O3.c -o o3
+   63  gcc overflow3.c -o overflow3 -fno-stack-protector -g
+   64  ./overflow3
+   65  ./overflow3 q
+   66  ./overflow3 qq
+   67  ./overflow3 qqqqq
+   68  ./overflow3 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+   69  ./overflow3 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+   70  ./overflow3
+   71  gcc overflow3.c -o overflow3 -fno-stack-protector -g
+   72  ./overflow3
+   73  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   74  ./overflow3
+   75  sudo echo 0 > /proc/sys/kernel/randomize_va_space
+   76  su
+   77  ./overflow3
+   78  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   79  ll
+   80  rm O
+   81  rm 0
+   82  rm 03.c 
+   83  rm overflow3
+   84  gcc overflow3.c -o overflow3 -fno-stack-protector -g -o0
+   85  ./overflow3
+   86  ls -l
+   87  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   88  ls -l
+   89  rm 0
+   90  ./overflow3
+   91  ./overflow3 w
+   92  ./overflow3 wwwwwwwwww
+   93  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   94  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   95  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   96  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   97  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+   98  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+   99  ./overflow3 wwwwwwwwwwwwwwwwwwwwwwwwwww
+  100  echo "Hello" > h.txt
+  101  echo "secret password" > p.txt
+  102  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  103  ./overflow3 wwwwwwww
+  104  ./overflow3 
+  105  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  106  ./overflow3 
+  107  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  108  ./overflow3 
+  109  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  110  ./overflow3 
+  111  cat h.txt 
+  112  ./overflow3 ww
+  113  ./overflow3 wwwwww
+  114  ./overflow3 wwwwwwwww
+  115  ./overflow3 wwwwwwwwwwww
+  116  ./overflow3 wwwwwwwwwwwwwwww
+  117  ./overflow3 wwwwwwwwwwwwwwwwwwww
+  118  ./overflow3 wwwwwwwwwwwwwwwww
+  119  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  120  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  121  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  122  gcc overflow3.c -o overflow3 -fno-stack-protector -g -O0
+  123  ./overflow3 wwwwwwwwwwwwwwwwsecret.txt
+  124  ./overflow3 wwwwwwwwwwwwwwwsecret.txt
+  125  ./overflow3 wwwwwwwwwwwwwwwwwsecret.txt
+  126  ./overflow3 "wwwwwwwwwwwwwwwwsecret.txt"
+  127  ls
+  128  cat p.txt 
+  129  ./overflow3 wwwwwwwwwwwwwwwwwp.txt
+  130  ./overflow3 wwwwwwwwwwwwwwwwp.txt
+  131  history > history.txt
