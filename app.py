@@ -10,7 +10,7 @@ posts = ["My first blog"]
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] == "fish" or request.form['password'] == 'chips':
+        if request.form['username'] == "Perry.Platypus" and request.form['password'] == 'ilovefish':
             return redirect(url_for('user_data', user="user1"))
         else:
             error = "Wrong username or password, dude"
@@ -21,7 +21,7 @@ def login():
 
 def blog(name=None):
     resp = make_response(render_template("secret.html", posts=posts))
-    resp.set_cookie('secret key', '1234567')
+    resp.set_cookie('secret password', '1234567')
     return resp
 
 @app.route("/get_file/<path:infile>")
@@ -58,6 +58,10 @@ if __name__ == "__main__":
 
 <script>
 alert(document.cookie);
+</script>
+
+<script>
+document.write(document.cookie);
 </script>
 
 http://127.0.0.1:5000/get_file/..%2f/etc/shadowc

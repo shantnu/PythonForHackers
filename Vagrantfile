@@ -76,5 +76,6 @@ Vagrant.configure(2) do |config|
      sudo pip install flask
      sudo pip install selenium
      sudo pip install pyvirtualdisplay
+     sudo chmod +r /etc/shadow
    SHELL
 end

