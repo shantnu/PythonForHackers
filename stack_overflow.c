@@ -11,6 +11,8 @@ int main(void)
     printf("Welcome to the Top secret website! Enter your password to continue\n");
     gets(password_buffer);
 
+    printf("\n You entered: %s\n", password_buffer);
+
     if(strcmp(password_buffer, "secret"))
     {
         printf ("Sorry! Wrong password. You can't Enter\n");

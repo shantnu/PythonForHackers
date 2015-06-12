@@ -8,10 +8,11 @@ int main(int argc, char **argv)
 {
     char *internal_buf, *name_buf;
     FILE *fp;
+    setvbuf(stdout,_IONBF,0,0);
 
     if (argc < 2)
     {
-        printf("\nUsage: buffer_overflow Your Name\n");
+        printf("\nUsage: buffer_overflow File name\n");
         exit(1);
     }
 
@@ -30,7 +31,7 @@ int main(int argc, char **argv)
     
 
     // This is the only file you should be allowed to read!
-    strncpy(internal_buf, "hello.txt", 9);
+    strncpy(internal_buf, argv[1], 9);
     printf("\ninternal_buf = %s\n", internal_buf);
 
     // Copy your name to internal buffer.
@@ -38,7 +39,7 @@ int main(int argc, char **argv)
 
     printf("\ninternal_buf = %s\n", internal_buf);
 
-    printf("\nHello %s. Opening the file %s for you, the only file you are allowed to access\n", name_buf, internal_buf);
+    printf("\nHello %s. Opening the file %s for you\n", name_buf, internal_buf);
 
     fp = fopen(internal_buf, "r");
 

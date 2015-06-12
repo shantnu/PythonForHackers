@@ -7,9 +7,7 @@ int main(int argc, char **argv)
 
     char p[1] = "s";
     char *p1 = p;
-    //char secret[] = "This is a secret string";
 
-    
     int num = 0;
     int i;
     if (argc > 1)
