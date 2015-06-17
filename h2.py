@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from subprocess import *
 import pdb
 
@@ -15,8 +16,8 @@ def stack_overflow():
 
         proc.stdin.flush()  
         stdout,stderr = proc.communicate()  
-        print stdout  
-        print stderr
+        print(stdout)  
+        print(stderr)
         counter += 1
 
     print("\n Code hacked at {} characters".format(counter))
@@ -32,8 +33,8 @@ def buffer_overflow():
         proc = Popen(["./buffer_overflow " + filename], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
         filename = "w" + filename
         stdout,stderr = proc.communicate()  
-        print stdout  
-        print stderr
+        print(stdout)  
+        print(stderr)
         counter += 1
 
    
@@ -47,13 +48,13 @@ def heart_bleed():
     while ("!" not in stdout):
         proc = Popen(["./heartbleed " + str(counter)], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
         stdout,stderr = proc.communicate()  
-        print stdout  
-        print stderr
+        print(stdout)  
+        print(stderr)
 
         counter += 1
 
     print("Final message is {}".format(stdout.replace("\n", "")))
 
-#stack_overflow()    
-#buffer_overflow()
+stack_overflow()    
+buffer_overflow()
 heart_bleed()

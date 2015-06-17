@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "precise32"
+  config.vm.box = "trusty32"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -67,15 +67,18 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
      sudo apt-get update
+     sudo apt-get install python3 -y
+     sudo apt-get install python3-pip -y
      sudo apt-get install xvfb -y
      sudo apt-get install python-pip -y
      sudo pip install pyvirtualdisplay -y
      sudo apt-get install firefox -y
      sudo apt-get install gdb -y
-     sudo pip install requests
-     sudo pip install flask
-     sudo pip install selenium
-     sudo pip install pyvirtualdisplay
+     sudo pip3 install requests
+     sudo pip3 install flask
+     sudo pip3 install selenium
+     sudo pip3 install pyvirtualdisplay
      sudo chmod +r /etc/shadow
+     sudo chmod +x /vagrant/*.py
    SHELL
 end
