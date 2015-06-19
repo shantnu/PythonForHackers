@@ -2,7 +2,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from pyvirtualdisplay import Display
-import pdb
 import re
 import requests
 
@@ -11,7 +10,9 @@ def guess_password(driver):
     with open("names.txt", "r") as f:
             names = f.read()
 
+    print(names)
     names = names.split("\n")
+    print(names)
 
     usernames = []
 
@@ -22,6 +23,7 @@ def guess_password(driver):
         passwords = f.read()
 
     passwords = passwords.split("\n")
+    print(passwords)
 
     for user in usernames:
         for password in passwords:
@@ -93,18 +95,19 @@ def xss_attack(driver):
 
 
 
+if __name__ == '__main__':
+    
+    display = Display(visible=0, size=(1024, 768))
+    display.start()
 
-display = Display(visible=0, size=(1024, 768))
-display.start()
+    driver = webdriver.Firefox()
 
-driver = webdriver.Firefox()
+    ## Uncomment one of the functions below to run a specific hack
 
-## Uncomment one of the functions below to run a specific hack
+    #brute_force_login(driver)
+    #sess_pred(driver)
+    #directory_transversal(driver)
+    #xss_attack(driver)
 
-brute_force_login(driver)
-#directory_transversal(driver)
-#sess_pred(driver)
-#xss_attack(driver)
-
-driver.close()
-display.stop()
+    driver.close()
+    display.stop()
