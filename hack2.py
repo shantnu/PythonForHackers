@@ -44,7 +44,7 @@ def heart_bleed():
 
     counter = 1
 
-    while ("!" not in stdout):
+    for i in range(75):
         proc = Popen(["./heartbleed " + str(counter)], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
         stdout,stderr = proc.communicate()  
         print(stdout)  
@@ -54,6 +54,12 @@ def heart_bleed():
 
     print("Final message is {}".format(stdout.replace("\n", "")))
 
+<<<<<<< HEAD:hack2.py
 stack_overflow()    
 #buffer_overflow()
 #heart_bleed()
+=======
+#stack_overflow()    
+#buffer_overflow()
+heart_bleed()
+>>>>>>> origin/master:h2.py
