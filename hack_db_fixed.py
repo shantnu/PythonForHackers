@@ -9,7 +9,7 @@ print("Without Hack: \n")
 
 c.execute("SELECT * from students WHERE Name='Robert'")
 result = c.fetchall()
-print result
+print(result)
 
 print("With Hack: \n")
 Name = "Robert'; DROP TABLE students;--"
@@ -19,5 +19,12 @@ print("Name to use:", Name_to_use)
 c.execute("SELECT * from students WHERE Name=(?)" , Name_to_use)
 
 result = c.fetchall()
-print result
+print(result)
+
+data = [("Robert'; DROP TABLE students;--", 10)]
+c.executemany("INSERT INTO students VALUES (?,?)", data)
+conn.commit()
+
+
+conn.close()
 

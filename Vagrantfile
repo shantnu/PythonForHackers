@@ -74,11 +74,9 @@ Vagrant.configure(2) do |config|
      sudo pip install pyvirtualdisplay -y
      sudo apt-get install firefox -y
      sudo apt-get install gdb -y
-     sudo pip3 install requests
-     sudo pip3 install flask
-     sudo pip3 install selenium
-     sudo pip3 install pyvirtualdisplay
+     sudo pip3 install -r /vagrant/requirements.txt
      sudo chmod +r /etc/shadow
      sudo chmod +x /vagrant/*.py
+     cd /vagrant
    SHELL
 end

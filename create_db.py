@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 import sqlite3
-from subprocess import *
+import subprocess
 
 db = "./students.db"
 
 # delete the database if it exists already
-proc = Popen(["rm " + db], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
+proc = subprocess.Popen(["rm " + db], shell = True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 stdout,stderr = proc.communicate()  
-print(stdout, stderr)
+#print(stdout, stderr)
 
 conn = sqlite3.connect(db)
 c = conn.cursor()
@@ -24,3 +24,5 @@ c.executemany("INSERT INTO students VALUES (?,?)", data)
 conn.commit()
 
 conn.close()
+
+print("Created database file students.db")

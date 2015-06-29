@@ -1,18 +1,17 @@
 #!/usr/bin/python
 from subprocess import *
-import pdb
 
 def stack_overflow():
 
     stdout = []
-    hack_password = "w"
-    counter = 1
+    hack_password = "1"
+    counter = 0
 
     while ("Now entering" not in stdout):
         print("Trying password {} with {} characters".format(hack_password, len(hack_password)))
         proc = Popen(["./stack_overflow"], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
         proc.stdin.write(hack_password + '\n')
-        hack_password += "w"
+        hack_password += "1"
 
         proc.stdin.flush()  
         stdout,stderr = proc.communicate()  
@@ -56,5 +55,5 @@ def heart_bleed():
     print("Final message is {}".format(stdout.replace("\n", "")))
 
 stack_overflow()    
-buffer_overflow()
-heart_bleed()
+#buffer_overflow()
+#heart_bleed()
