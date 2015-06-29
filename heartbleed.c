@@ -3,10 +3,12 @@
 
 int main(int argc, char **argv)
 {
-    char secret2[] = "This is a secret string. You should not be able to read this!!!";
+    // This text should NEVER be readable
+    char secret_text[] = "This is a secret string. You should not be able to read this!!!";
 
-    char p[1] = "s";
-    char *p1 = p;
+    //This is the only text you should be able to read.
+    char normal_text[1] = "s";
+    char *p1 = normal_text;
 
     int num = 0;
     int i;
@@ -19,7 +21,7 @@ int main(int argc, char **argv)
         num = 0;
     }
 
-    for (i =0; i < num; i ++)
+    for (i = 0; i < num; i ++)
     {
         printf("%c\n", *p1);
         p1++;
