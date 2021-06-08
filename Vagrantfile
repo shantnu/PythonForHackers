@@ -69,11 +69,8 @@ Vagrant.configure(2) do |config|
      sudo apt-get update
      sudo apt-get install python3 -y
      sudo apt-get install python3-pip -y
-     sudo apt-get install xvfb -y
-     sudo apt-get install python-pip -y
      sudo apt-get install firefox-geckodriver -y
      sudo apt-get install firefox -y
-     sudo apt-get install gdb -y
      sudo pip3 install -r /vagrant/requirements.txt
      sudo chmod +r /etc/shadow
      sudo chmod +x /vagrant/*.py

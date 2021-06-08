@@ -1,13 +1,8 @@
-EasyProcess>=0.1.9
 Flask>=0.10.1
-Jinja2>=2.7.3
 MarkupSafe>=0.23
-Werkzeug>=0.10.4
-chardet>=2.2.1
-colorama>=0.2.5
-defer>=1.0.4
 html5lib>=0.999
 itsdangerous>=0.24
 requests>=2.2.1
 selenium>=2.46.0
 urllib3>=1.7.1
+pytest
