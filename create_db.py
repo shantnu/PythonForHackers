@@ -2,27 +2,32 @@
 import sqlite3
 import subprocess
 
-db = "./students.db"
 
-# delete the database if it exists already
-proc = subprocess.Popen(["rm " + db], shell = True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+def create_db():
+    db = "./students.db"
 
-stdout,stderr = proc.communicate()  
-#print(stdout, stderr)
+    # delete the database if it exists already
+    proc = subprocess.Popen(["rm " + db], shell = True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-conn = sqlite3.connect(db)
-c = conn.cursor()
+    stdout,stderr = proc.communicate()
+    #print(stdout, stderr)
 
-cmd = "CREATE TABLE students (Name TEXT, Age INT)"
-c.execute(cmd)
-conn.commit()
+    conn = sqlite3.connect(db)
+    c = conn.cursor()
 
-data = [("Robert", 10), ("Sally", 15), ("Matthew", 7)]
+    cmd = "CREATE TABLE students (Name TEXT, Age INT)"
+    c.execute(cmd)
+    conn.commit()
 
-c.executemany("INSERT INTO students VALUES (?,?)", data)
+    data = [("Robert", 10), ("Sally", 15), ("Matthew", 7)]
 
-conn.commit()
+    c.executemany("INSERT INTO students VALUES (?,?)", data)
 
-conn.close()
+    conn.commit()
 
-print("Created database file students.db")
+    conn.close()
+
+    print("Created database file students.db")
+
+if __name__ == "__main__":
+    create_db()

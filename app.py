@@ -6,8 +6,15 @@ app.jinja_env.autoescape = False
 SECRET_KEY = 'Chocolate chip cookies'
 posts = ["My first blog"]
 
-@app.route('/', methods=['GET', 'POST'])
 
+
+def create_app():
+    app = Flask(__name__)
+
+    app.jinja_env.autoescape = False
+    return app
+
+@app.route('/', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -45,8 +52,10 @@ def add():
     posts.append(blogRead)
 
     #neeeded, else complains
-    return redirect(url_for('blog'))    
+    return redirect(url_for('blog'))
 
+def app_run():
+    app.run("0.0.0.0",debug = True)
 
 if __name__ == "__main__":
     app.run("0.0.0.0",debug = True)
