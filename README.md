@@ -1,4 +1,4 @@
-![Test badge](https://github.com/shantnu/PyEng/actions/workflows/main.yml/badge.svg)
+![Test badge](https://github.com/shantnu/PythonForHackers/actions/workflows/main.yml/badge.svg)
 
 # PythonForHackers
 
